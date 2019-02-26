@@ -1,0 +1,15 @@
+C:\Users\lukee\Documents\GitHub\School-Work\EPQ\Mirror\Mirror\bin\Debug\Mirror.exe.config
+C:\Users\lukee\Documents\GitHub\School-Work\EPQ\Mirror\Mirror\bin\Debug\Mirror.exe
+C:\Users\lukee\Documents\GitHub\School-Work\EPQ\Mirror\Mirror\bin\Debug\Mirror.pdb
+C:\Users\lukee\Documents\GitHub\School-Work\EPQ\Mirror\Mirror\bin\Debug\Newtonsoft.Json.dll
+C:\Users\lukee\Documents\GitHub\School-Work\EPQ\Mirror\Mirror\bin\Debug\Newtonsoft.Json.pdb
+C:\Users\lukee\Documents\GitHub\School-Work\EPQ\Mirror\Mirror\bin\Debug\Newtonsoft.Json.xml
+C:\Users\lukee\Documents\GitHub\School-Work\EPQ\Mirror\Mirror\obj\Debug\Mirror.csprojAssemblyReference.cache
+C:\Users\lukee\Documents\GitHub\School-Work\EPQ\Mirror\Mirror\obj\Debug\Mirror.ErrorFrom.resources
+C:\Users\lukee\Documents\GitHub\School-Work\EPQ\Mirror\Mirror\obj\Debug\Mirror.Properties.Resources.resources
+C:\Users\lukee\Documents\GitHub\School-Work\EPQ\Mirror\Mirror\obj\Debug\Mirror.csproj.GenerateResource.cache
+C:\Users\lukee\Documents\GitHub\School-Work\EPQ\Mirror\Mirror\obj\Debug\Mirror.csproj.CoreCompileInputs.cache
+C:\Users\lukee\Documents\GitHub\School-Work\EPQ\Mirror\Mirror\obj\Debug\Mirror.csproj.CopyComplete
+C:\Users\lukee\Documents\GitHub\School-Work\EPQ\Mirror\Mirror\obj\Debug\Mirror.exe
+C:\Users\lukee\Documents\GitHub\School-Work\EPQ\Mirror\Mirror\obj\Debug\Mirror.pdb
+C:\Users\lukee\Documents\GitHub\School-Work\EPQ\Mirror\Mirror\obj\Debug\Mirror.MainForm.resources
