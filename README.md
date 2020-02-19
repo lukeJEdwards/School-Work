@@ -1,103 +1,37 @@
-# Computer-science-year-2-project
+# computer science project
 
-# 1. folder architecture
-1 - design structure/architecture of the folder for files ()
-    ---info---
-     - Libraries
-     - custom files
+## GUI Design
 
-    ---files---
-     - base html for page (HTML)
-     - html for extension (HTML)
-     - gui for html pages using the p5 libraries (js)
-     - node module (js)
-     - tree module (js)
-     - manifest file for chrome extension (json)
-     - background script for chrom extension (js)
-	 
-	---setup---
-	 - index html
-	 - pop up html
-	 - manifest json file
+![progress](http://progress-bar.dev/50/?title=InProgress) Window Style
+![progress](http://progress-bar.dev/75/?title=InProgress) control button (close, minismise, maximize)
+![progress](http://progress-bar.dev/100/?title=done) Search bar
+![progress](http://progress-bar.dev/50/?title=InProgress) Buttons (genral)
+![progress](http://progress-bar.dev/75/?title=InProgress) Side bar
+![progress](http://progress-bar.dev/50/?title=InProgress) icons
+![progress](http://progress-bar.dev/0/?title=InProgress) Main file view
 
-# 2. tab data
-2 - pull tab data.
-     ---info---
-      - URL (string)
-      - title (string)
-      - faviconUrl (string)
-      - sessionId (string)
-      - active (boolean)
+## MVVM (using Caliburn.mirco)
 
-# 3. node design
-3 - design node class for tree
-    ---info---
-    varibles {
-	
-        - URL to website
-        - favicon from tab (if one)
-        - date and time of arrival
-        - date and time of departure
-        - number of time visited on that tab
-        - parent node
-        - child array of nodes
-        - title
-        - weather active or not 
-        - session ID
-        
-        --gui--
-        - width
-        - height
-        - line lengths
-		- label
-		- text for text box
-		- favicon image
-		- title label
-        
-        
-     }
+### Models
 
-     methods {
-        - Get the current date and time (getdate)
-        - Add a child to a node (addChild)
-        - Remove a child from parent (removeChild)
-        - view node, return info like childrent parent and it's URL (veiwNode)
-        - validation used for searchs (nodeValidation)
-        - Date comparision (CompareDate)
-		- Make new gui node for the gui
-		- Algorithm for sapcing 
-     }
+![progress](http://progress-bar.dev/100/?title=done) Directory Item
+![progress](http://progress-bar.dev/100/?title=done) Directory Item Type (Enum)
+![progress](http://progress-bar.dev/100/?title=done) Directory Structure
+![progress](http://progress-bar.dev/75/?title=InProgress) Sorting and searching algorithms
 
-# 4. tree design
-4 - design tree class
-    ---info---
-    variables{
-        - root
-		- current node
-		- array of pre-existing nodes
-		- zipper
-    }
-	
-	methods{
-		- Add new node
-		- Change current node
-	}
-	
-# 5. design zipper
-5 - design zipper class
-	---info---
-	- still got to research
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+### Views
+
+![progress](http://progress-bar.dev/50/?title=InProgress) Root view (inherits from Screen)
+![progress](http://progress-bar.dev/50/?title=InProgress) Current file view (inherits from Screen)
+![progress](http://progress-bar.dev/0/?title=InProgress) Right Click options
+
+### View Models
+
+![progress](http://progress-bar.dev/50/?title=InProgress) Root VM
+![progress](http://progress-bar.dev/50/?title=InProgress) Current file VM
+![progress](http://progress-bar.dev/0/?title=InProgress) Right Click VM
+![progress](http://progress-bar.dev/100/?title=done) Directory Item VM
+![progress](http://progress-bar.dev/75/?title=InProgress) Current Directory VM
+![progress](http://progress-bar.dev/100/?title=done) Relay Commands
+
+##
