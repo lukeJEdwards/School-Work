@@ -1,0 +1,105 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        x:Class="FileBrowser.Views.RootView"
+        mc:Ignorable="d" x:Name="Root"
+        xmlns:cal="http://www.caliburnproject.org"
+        xmlns:local="clr-namespace:FileBrowser.Views"
+        Title="RootView" Background="Transparent" WindowStyle="None"
+        Width="800" Height="600"
+        WindowStartupLocation="CenterScreen" AllowsTransparency="True" >
+    
+    <Border Style="{StaticResource RootStyle}">
+        <Grid>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="10"/>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="10"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="10"/>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="10"/>
+            </Grid.ColumnDefinitions>
+
+
+
+            <!--Row 1-->
+            <Border BorderThickness="0 0 0 1" BorderBrush="White" Grid.Row="1" Grid.Column="0"
+                    Grid.ColumnSpan="4"/>
+
+            <!--Undo buttons-->
+            <StackPanel Orientation="Horizontal" Grid.Row="1" Grid.Column="1"
+                        HorizontalAlignment="Left" VerticalAlignment="Top">
+                <Button Style="{StaticResource BackButton}" Margin="16,10,0,0"
+                        cal:Message.Attach="[Event Click]=[Action BackButton()]"/>
+                <Button Style="{StaticResource ForwardButton}" Margin="0,10,0,0"
+                        cal:Message.Attach="[Event Click]=[Action ForwardButton()]"/>
+            </StackPanel>
+
+            <!--Control Buttons-->
+            <StackPanel Orientation="Horizontal" Grid.Row="1" Grid.Column="1"
+                        Grid.ColumnSpan="2" HorizontalAlignment="Right" 
+                        VerticalAlignment="Top">
+                <Button Style="{StaticResource MinimiseButton}"
+                        Margin="0,10,0,0" cal:Message.Attach="Minimise($view)"/>
+                <Button Style="{StaticResource Maximse}"
+                        Margin="16,10,0,0" cal:Message.Attach="Maximise($view)"/>
+                <Button Style="{StaticResource CloseButton}"
+                        Margin="16,10,0,0" cal:Message.Attach="Exit($view)"/>
+            </StackPanel>
+
+            <!--Search Bar-->
+            <StackPanel Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3"
+                        VerticalAlignment="Bottom">
+
+                <TextBlock Style="{StaticResource SearchBoxTitle}" Grid.Row="0" Grid.Column="0"
+                       Grid.ColumnSpan="3" 
+                           Text="{Binding Path=searchValue, Mode=OneWay}"/>
+
+                <xctk:WatermarkTextBox Style="{StaticResource CustomTextbox}" Grid.Column="0" Grid.Row="0"
+                 Grid.ColumnSpan="3" Margin="16,0,16,16" Padding="15,0,0,0" Height="36" 
+                 x:Name="searchValue"/>
+            </StackPanel>
+
+            <!--Row Two-->
+            <!--Side Bar-->
+
+            <TreeView Style="{StaticResource CustomTreeView}" Grid.Row="2" Grid.Column="1"
+                      ItemsSource="{Binding Path=Drives}" ItemContainerStyle="{StaticResource TreeViewItemBase}">
+
+                <TreeView.ItemTemplate>
+                    <HierarchicalDataTemplate ItemsSource="{Binding Path=Children}">
+                        <StackPanel Orientation="Horizontal" Cursor="Hand">
+                            <Image Width="25" Source="{Binding Path=Image}"/>
+                            <TextBlock VerticalAlignment="Center" Text="{Binding Path=Name, Mode=OneWay}"
+                                       cal:Message.Attach="[Event MouseLeftButtonDown]=[Action OpenFromSidebar($dataContext)]"/>
+                        </StackPanel>
+                    </HierarchicalDataTemplate>
+                </TreeView.ItemTemplate>
+
+            </TreeView>
+
+            <ItemsControl Grid.Row="2" Grid.Column="2" ItemsSource="{Binding Path=CurrentPathChildren}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Style="{StaticResource FileItem}"
+                                    cal:Message.Attach="[Event MouseLeftButtonDown]=[Action OpenChild($dataContext)]">
+                            <Image Source="{Binding Path=Image, Mode=OneWay}"/>
+                            <TextBlock Foreground="White" VerticalAlignment="Center"
+                                       Text="{Binding Path=Name, Mode=OneWay}"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+
+        </Grid>
+    </Border>
+</Window>

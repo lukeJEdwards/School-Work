@@ -1,0 +1,274 @@
+D:\Documents (D)\Computer-science-year-2-project\FileBrowser\FileBrowser\obj\Debug\FileBrowser.csprojAssemblyReference.cache
+D:\Documents (D)\Computer-science-year-2-project\FileBrowser\FileBrowser\obj\Debug\Views\RootView.g.cs
+D:\Documents (D)\Computer-science-year-2-project\FileBrowser\FileBrowser\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\Documents (D)\Computer-science-year-2-project\FileBrowser\FileBrowser\obj\Debug\FileBrowser_MarkupCompile.cache
+D:\Documents (D)\Computer-science-year-2-project\FileBrowser\FileBrowser\obj\Debug\FileBrowser_MarkupCompile.lref
+D:\Documents (D)\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\FileBrowser.exe.config
+D:\Documents (D)\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\FileBrowser.exe
+D:\Documents (D)\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\FileBrowser.pdb
+D:\Documents (D)\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\Caliburn.Micro.dll
+D:\Documents (D)\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\Caliburn.Micro.Platform.Core.dll
+D:\Documents (D)\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\Caliburn.Micro.Platform.dll
+D:\Documents (D)\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\System.Windows.Interactivity.dll
+D:\Documents (D)\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\Caliburn.Micro.xml
+D:\Documents (D)\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\Caliburn.Micro.Platform.xml
+D:\Documents (D)\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\Caliburn.Micro.Platform.Core.xml
+D:\Documents (D)\Computer-science-year-2-project\FileBrowser\FileBrowser\obj\Debug\App.g.cs
+D:\Documents (D)\Computer-science-year-2-project\FileBrowser\FileBrowser\obj\Debug\App.baml
+D:\Documents (D)\Computer-science-year-2-project\FileBrowser\FileBrowser\obj\Debug\Views\RootView.baml
+D:\Documents (D)\Computer-science-year-2-project\FileBrowser\FileBrowser\obj\Debug\FileBrowser.g.resources
+D:\Documents (D)\Computer-science-year-2-project\FileBrowser\FileBrowser\obj\Debug\FileBrowser.Properties.Resources.resources
+D:\Documents (D)\Computer-science-year-2-project\FileBrowser\FileBrowser\obj\Debug\FileBrowser.csproj.GenerateResource.cache
+D:\Documents (D)\Computer-science-year-2-project\FileBrowser\FileBrowser\obj\Debug\FileBrowser.csproj.CopyComplete
+D:\Documents (D)\Computer-science-year-2-project\FileBrowser\FileBrowser\obj\Debug\FileBrowser.exe
+D:\Documents (D)\Computer-science-year-2-project\FileBrowser\FileBrowser\obj\Debug\FileBrowser.pdb
+D:\Documents (D)\Computer-science-year-2-project\FileBrowser\FileBrowser\obj\Debug\Styles\CustomRoot.baml
+D:\Documents (D)\Computer-science-year-2-project\FileBrowser\FileBrowser\obj\Debug\Styles\CustomTextbox.baml
+C:\Users\lukee\Documents\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\FileBrowser.exe.config
+C:\Users\lukee\Documents\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\FileBrowser.exe
+C:\Users\lukee\Documents\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\FileBrowser.pdb
+C:\Users\lukee\Documents\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\Caliburn.Micro.dll
+C:\Users\lukee\Documents\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\Caliburn.Micro.Platform.Core.dll
+C:\Users\lukee\Documents\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\Caliburn.Micro.Platform.dll
+C:\Users\lukee\Documents\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\lukee\Documents\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\Caliburn.Micro.xml
+C:\Users\lukee\Documents\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\Caliburn.Micro.Platform.xml
+C:\Users\lukee\Documents\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\Caliburn.Micro.Platform.Core.xml
+C:\Users\lukee\Documents\Computer-science-year-2-project\FileBrowser\FileBrowser\obj\Debug\FileBrowser.csprojAssemblyReference.cache
+C:\Users\lukee\Documents\Computer-science-year-2-project\FileBrowser\FileBrowser\obj\Debug\Styles\CustomRoot.baml
+C:\Users\lukee\Documents\Computer-science-year-2-project\FileBrowser\FileBrowser\obj\Debug\Styles\CustomTextbox.baml
+C:\Users\lukee\Documents\Computer-science-year-2-project\FileBrowser\FileBrowser\obj\Debug\Views\RootView.baml
+C:\Users\lukee\Documents\Computer-science-year-2-project\FileBrowser\FileBrowser\obj\Debug\Views\RootView.g.cs
+C:\Users\lukee\Documents\Computer-science-year-2-project\FileBrowser\FileBrowser\obj\Debug\App.g.cs
+C:\Users\lukee\Documents\Computer-science-year-2-project\FileBrowser\FileBrowser\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\lukee\Documents\Computer-science-year-2-project\FileBrowser\FileBrowser\obj\Debug\FileBrowser_MarkupCompile.cache
+C:\Users\lukee\Documents\Computer-science-year-2-project\FileBrowser\FileBrowser\obj\Debug\FileBrowser_MarkupCompile.lref
+C:\Users\lukee\Documents\Computer-science-year-2-project\FileBrowser\FileBrowser\obj\Debug\App.baml
+C:\Users\lukee\Documents\Computer-science-year-2-project\FileBrowser\FileBrowser\obj\Debug\Styles\CustomControlButtons.baml
+C:\Users\lukee\Documents\Computer-science-year-2-project\FileBrowser\FileBrowser\obj\Debug\Styles\Properties.baml
+C:\Users\lukee\Documents\Computer-science-year-2-project\FileBrowser\FileBrowser\obj\Debug\FileBrowser.g.resources
+C:\Users\lukee\Documents\Computer-science-year-2-project\FileBrowser\FileBrowser\obj\Debug\FileBrowser.Properties.Resources.resources
+C:\Users\lukee\Documents\Computer-science-year-2-project\FileBrowser\FileBrowser\obj\Debug\FileBrowser.csproj.GenerateResource.cache
+C:\Users\lukee\Documents\Computer-science-year-2-project\FileBrowser\FileBrowser\obj\Debug\FileBrowser.csproj.CopyComplete
+C:\Users\lukee\Documents\Computer-science-year-2-project\FileBrowser\FileBrowser\obj\Debug\FileBrowser.exe
+C:\Users\lukee\Documents\Computer-science-year-2-project\FileBrowser\FileBrowser\obj\Debug\FileBrowser.pdb
+C:\Users\lukee\Documents\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\SharpVectors.Converters.Wpf.dll
+C:\Users\lukee\Documents\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\SharpVectors.Core.dll
+C:\Users\lukee\Documents\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\SharpVectors.Css.dll
+C:\Users\lukee\Documents\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\SharpVectors.Dom.dll
+C:\Users\lukee\Documents\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\SharpVectors.Model.dll
+C:\Users\lukee\Documents\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\SharpVectors.Rendering.Gdi.dll
+C:\Users\lukee\Documents\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\SharpVectors.Rendering.Wpf.dll
+C:\Users\lukee\Documents\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\SharpVectors.Runtime.Wpf.dll
+C:\Users\lukee\Documents\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\SharpVectors.Converters.Wpf.pdb
+C:\Users\lukee\Documents\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\SharpVectors.Converters.Wpf.xml
+C:\Users\lukee\Documents\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\SharpVectors.Core.pdb
+C:\Users\lukee\Documents\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\SharpVectors.Core.xml
+C:\Users\lukee\Documents\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\SharpVectors.Css.pdb
+C:\Users\lukee\Documents\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\SharpVectors.Css.xml
+C:\Users\lukee\Documents\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\SharpVectors.Dom.pdb
+C:\Users\lukee\Documents\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\SharpVectors.Dom.xml
+C:\Users\lukee\Documents\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\SharpVectors.Model.pdb
+C:\Users\lukee\Documents\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\SharpVectors.Model.xml
+C:\Users\lukee\Documents\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\SharpVectors.Rendering.Gdi.pdb
+C:\Users\lukee\Documents\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\SharpVectors.Rendering.Gdi.xml
+C:\Users\lukee\Documents\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\SharpVectors.Rendering.Wpf.pdb
+C:\Users\lukee\Documents\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\SharpVectors.Rendering.Wpf.xml
+C:\Users\lukee\Documents\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\SharpVectors.Runtime.Wpf.pdb
+C:\Users\lukee\Documents\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\SharpVectors.Runtime.Wpf.xml
+C:\Users\lukee\Documents\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\Xceed.Wpf.AvalonDock.dll
+C:\Users\lukee\Documents\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Aero.dll
+C:\Users\lukee\Documents\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Metro.dll
+C:\Users\lukee\Documents\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\Xceed.Wpf.AvalonDock.Themes.VS2010.dll
+C:\Users\lukee\Documents\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\Xceed.Wpf.Toolkit.dll
+C:\Users\lukee\Documents\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\de\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\lukee\Documents\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\es\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\lukee\Documents\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\fr\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\lukee\Documents\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\hu\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\lukee\Documents\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\it\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\lukee\Documents\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\pt-BR\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\lukee\Documents\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\ro\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\lukee\Documents\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\ru\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\lukee\Documents\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\sv\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\lukee\Documents\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
+D:\Documents (D)\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\SharpVectors.Converters.Wpf.dll
+D:\Documents (D)\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\SharpVectors.Core.dll
+D:\Documents (D)\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\SharpVectors.Css.dll
+D:\Documents (D)\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\SharpVectors.Dom.dll
+D:\Documents (D)\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\SharpVectors.Model.dll
+D:\Documents (D)\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\SharpVectors.Rendering.Gdi.dll
+D:\Documents (D)\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\SharpVectors.Rendering.Wpf.dll
+D:\Documents (D)\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\SharpVectors.Runtime.Wpf.dll
+D:\Documents (D)\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\Xceed.Wpf.AvalonDock.dll
+D:\Documents (D)\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Aero.dll
+D:\Documents (D)\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Metro.dll
+D:\Documents (D)\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\Xceed.Wpf.AvalonDock.Themes.VS2010.dll
+D:\Documents (D)\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\Xceed.Wpf.Toolkit.dll
+D:\Documents (D)\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\SharpVectors.Converters.Wpf.pdb
+D:\Documents (D)\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\SharpVectors.Converters.Wpf.xml
+D:\Documents (D)\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\SharpVectors.Core.pdb
+D:\Documents (D)\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\SharpVectors.Core.xml
+D:\Documents (D)\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\SharpVectors.Css.pdb
+D:\Documents (D)\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\SharpVectors.Css.xml
+D:\Documents (D)\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\SharpVectors.Dom.pdb
+D:\Documents (D)\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\SharpVectors.Dom.xml
+D:\Documents (D)\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\SharpVectors.Model.pdb
+D:\Documents (D)\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\SharpVectors.Model.xml
+D:\Documents (D)\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\SharpVectors.Rendering.Gdi.pdb
+D:\Documents (D)\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\SharpVectors.Rendering.Gdi.xml
+D:\Documents (D)\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\SharpVectors.Rendering.Wpf.pdb
+D:\Documents (D)\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\SharpVectors.Rendering.Wpf.xml
+D:\Documents (D)\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\SharpVectors.Runtime.Wpf.pdb
+D:\Documents (D)\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\SharpVectors.Runtime.Wpf.xml
+D:\Documents (D)\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\de\Xceed.Wpf.AvalonDock.resources.dll
+D:\Documents (D)\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\es\Xceed.Wpf.AvalonDock.resources.dll
+D:\Documents (D)\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\fr\Xceed.Wpf.AvalonDock.resources.dll
+D:\Documents (D)\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\hu\Xceed.Wpf.AvalonDock.resources.dll
+D:\Documents (D)\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\it\Xceed.Wpf.AvalonDock.resources.dll
+D:\Documents (D)\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\pt-BR\Xceed.Wpf.AvalonDock.resources.dll
+D:\Documents (D)\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\ro\Xceed.Wpf.AvalonDock.resources.dll
+D:\Documents (D)\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\ru\Xceed.Wpf.AvalonDock.resources.dll
+D:\Documents (D)\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\sv\Xceed.Wpf.AvalonDock.resources.dll
+D:\Documents (D)\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
+D:\Documents (D)\Computer-science-year-2-project\FileBrowser\FileBrowser\obj\Debug\Styles\CustomControlButtons.baml
+D:\Documents (D)\Computer-science-year-2-project\FileBrowser\FileBrowser\obj\Debug\Styles\CustomTreeView.baml
+D:\Documents (D)\Computer-science-year-2-project\FileBrowser\FileBrowser\obj\Debug\Styles\Properties.baml
+C:\Users\lukee\Documents\Computer-science-year-2-project\FileBrowser\FileBrowser\obj\Debug\Styles\CustomTreeView.baml
+D:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\FileBrowser.exe.config
+D:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\FileBrowser.exe
+D:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\FileBrowser.pdb
+D:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\Caliburn.Micro.dll
+D:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\Caliburn.Micro.Platform.Core.dll
+D:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\Caliburn.Micro.Platform.dll
+D:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\SharpVectors.Converters.Wpf.dll
+D:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\SharpVectors.Core.dll
+D:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\SharpVectors.Css.dll
+D:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\SharpVectors.Dom.dll
+D:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\SharpVectors.Model.dll
+D:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\SharpVectors.Rendering.Gdi.dll
+D:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\SharpVectors.Rendering.Wpf.dll
+D:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\SharpVectors.Runtime.Wpf.dll
+D:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\System.Windows.Interactivity.dll
+D:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\Xceed.Wpf.AvalonDock.dll
+D:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Aero.dll
+D:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Metro.dll
+D:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\Xceed.Wpf.AvalonDock.Themes.VS2010.dll
+D:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\Xceed.Wpf.Toolkit.dll
+D:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\Caliburn.Micro.xml
+D:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\Caliburn.Micro.Platform.xml
+D:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\Caliburn.Micro.Platform.Core.xml
+D:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\SharpVectors.Converters.Wpf.pdb
+D:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\SharpVectors.Converters.Wpf.xml
+D:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\SharpVectors.Core.pdb
+D:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\SharpVectors.Core.xml
+D:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\SharpVectors.Css.pdb
+D:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\SharpVectors.Css.xml
+D:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\SharpVectors.Dom.pdb
+D:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\SharpVectors.Dom.xml
+D:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\SharpVectors.Model.pdb
+D:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\SharpVectors.Model.xml
+D:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\SharpVectors.Rendering.Gdi.pdb
+D:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\SharpVectors.Rendering.Gdi.xml
+D:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\SharpVectors.Rendering.Wpf.pdb
+D:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\SharpVectors.Rendering.Wpf.xml
+D:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\SharpVectors.Runtime.Wpf.pdb
+D:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\SharpVectors.Runtime.Wpf.xml
+D:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\de\Xceed.Wpf.AvalonDock.resources.dll
+D:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\es\Xceed.Wpf.AvalonDock.resources.dll
+D:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\fr\Xceed.Wpf.AvalonDock.resources.dll
+D:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\hu\Xceed.Wpf.AvalonDock.resources.dll
+D:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\it\Xceed.Wpf.AvalonDock.resources.dll
+D:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\pt-BR\Xceed.Wpf.AvalonDock.resources.dll
+D:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\ro\Xceed.Wpf.AvalonDock.resources.dll
+D:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\ru\Xceed.Wpf.AvalonDock.resources.dll
+D:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\sv\Xceed.Wpf.AvalonDock.resources.dll
+D:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
+D:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\obj\Debug\FileBrowser.csprojAssemblyReference.cache
+D:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\obj\Debug\Styles\CustomRoot.baml
+D:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\obj\Debug\Styles\CustomTextbox.baml
+D:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\obj\Debug\Views\RootView.g.cs
+D:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\obj\Debug\App.g.cs
+D:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\obj\Debug\FileBrowser_MarkupCompile.cache
+D:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\obj\Debug\FileBrowser_MarkupCompile.lref
+D:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\obj\Debug\App.baml
+D:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\obj\Debug\Styles\CustomControlButtons.baml
+D:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\obj\Debug\Styles\CustomTreeView.baml
+D:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\obj\Debug\Styles\Properties.baml
+D:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\obj\Debug\Views\RootView.baml
+D:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\obj\Debug\FileBrowser.g.resources
+D:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\obj\Debug\FileBrowser.Properties.Resources.resources
+D:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\obj\Debug\FileBrowser.csproj.GenerateResource.cache
+D:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\obj\Debug\FileBrowser.csproj.CopyComplete
+D:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\obj\Debug\FileBrowser.exe
+D:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\obj\Debug\FileBrowser.pdb
+E:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\FileBrowser.exe.config
+E:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\FileBrowser.exe
+E:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\FileBrowser.pdb
+E:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\Caliburn.Micro.dll
+E:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\Caliburn.Micro.Platform.Core.dll
+E:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\Caliburn.Micro.Platform.dll
+E:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\SharpVectors.Converters.Wpf.dll
+E:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\SharpVectors.Core.dll
+E:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\SharpVectors.Css.dll
+E:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\SharpVectors.Dom.dll
+E:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\SharpVectors.Model.dll
+E:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\SharpVectors.Rendering.Gdi.dll
+E:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\SharpVectors.Rendering.Wpf.dll
+E:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\SharpVectors.Runtime.Wpf.dll
+E:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\System.Windows.Interactivity.dll
+E:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\Xceed.Wpf.AvalonDock.dll
+E:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Aero.dll
+E:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Metro.dll
+E:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\Xceed.Wpf.AvalonDock.Themes.VS2010.dll
+E:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\Xceed.Wpf.Toolkit.dll
+E:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\Caliburn.Micro.xml
+E:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\Caliburn.Micro.Platform.xml
+E:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\Caliburn.Micro.Platform.Core.xml
+E:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\SharpVectors.Converters.Wpf.pdb
+E:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\SharpVectors.Converters.Wpf.xml
+E:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\SharpVectors.Core.pdb
+E:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\SharpVectors.Core.xml
+E:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\SharpVectors.Css.pdb
+E:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\SharpVectors.Css.xml
+E:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\SharpVectors.Dom.pdb
+E:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\SharpVectors.Dom.xml
+E:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\SharpVectors.Model.pdb
+E:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\SharpVectors.Model.xml
+E:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\SharpVectors.Rendering.Gdi.pdb
+E:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\SharpVectors.Rendering.Gdi.xml
+E:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\SharpVectors.Rendering.Wpf.pdb
+E:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\SharpVectors.Rendering.Wpf.xml
+E:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\SharpVectors.Runtime.Wpf.pdb
+E:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\SharpVectors.Runtime.Wpf.xml
+E:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\de\Xceed.Wpf.AvalonDock.resources.dll
+E:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\es\Xceed.Wpf.AvalonDock.resources.dll
+E:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\fr\Xceed.Wpf.AvalonDock.resources.dll
+E:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\hu\Xceed.Wpf.AvalonDock.resources.dll
+E:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\it\Xceed.Wpf.AvalonDock.resources.dll
+E:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\pt-BR\Xceed.Wpf.AvalonDock.resources.dll
+E:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\ro\Xceed.Wpf.AvalonDock.resources.dll
+E:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\ru\Xceed.Wpf.AvalonDock.resources.dll
+E:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\sv\Xceed.Wpf.AvalonDock.resources.dll
+E:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\bin\Debug\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
+E:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\obj\Debug\FileBrowser.csprojAssemblyReference.cache
+E:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\obj\Debug\Styles\CustomRoot.baml
+E:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\obj\Debug\Styles\CustomTextbox.baml
+E:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\obj\Debug\Styles\CustomTreeView.baml
+E:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\obj\Debug\Views\RootView.g.cs
+E:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\obj\Debug\App.g.cs
+E:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\obj\Debug\GeneratedInternalTypeHelper.g.cs
+E:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\obj\Debug\FileBrowser_MarkupCompile.cache
+E:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\obj\Debug\FileBrowser_MarkupCompile.lref
+E:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\obj\Debug\App.baml
+E:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\obj\Debug\Styles\CustomControlButtons.baml
+E:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\obj\Debug\Styles\Properties.baml
+E:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\obj\Debug\Views\RootView.baml
+E:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\obj\Debug\FileBrowser.g.resources
+E:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\obj\Debug\FileBrowser.Properties.Resources.resources
+E:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\obj\Debug\FileBrowser.csproj.GenerateResource.cache
+E:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\obj\Debug\FileBrowser.csproj.CopyComplete
+E:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\obj\Debug\FileBrowser.exe
+E:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\obj\Debug\FileBrowser.pdb
+E:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\obj\Debug\Views\FileView.g.cs
+E:\Computer Science A-Level\Computer-science-year-2-project\FileBrowser\FileBrowser\obj\Debug\Views\FileView.baml
