@@ -131,6 +131,7 @@ namespace FileBrowser.Models
         {
             //create empty item list
             List<DirectoryItem> items = new List<DirectoryItem>();
+            List<string> SDirs = Enum.GetNames(typeof(Environment.SpecialFolder)).ToList<string>();
             #region Gets folders
             //trys to get directories that are in fullPath
             try
@@ -140,7 +141,17 @@ namespace FileBrowser.Models
                 if(dirs.Length > 0)
                 {
                     //loop through Directories and converts them to directoryitem and adds them to item list
-                    items.AddRange(dirs.Select(dir => new DirectoryItem { FullPath = dir, Type = DirectoryType.Folder }));
+                    foreach(string dir in dirs)
+                    {
+                        if(SDirs.Contains(GetFileOrFolderName(dir).Replace(" ", "")))
+                        {
+                            items.Add(new DirectoryItem() { FullPath = dir, Type = DirectoryType.SpecialFolder });
+                        }
+                        else
+                        {
+                            items.Add(new DirectoryItem() { FullPath = dir, Type = DirectoryType.Folder });
+                        }
+                    }
                 }
             }
             catch(Exception)

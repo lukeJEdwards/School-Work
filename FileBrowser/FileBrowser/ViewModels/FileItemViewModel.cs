@@ -67,6 +67,7 @@ namespace FileBrowser.ViewModels
         public void GetChildren()
         {
             List<DirectoryItem> children = DirectoryStructure.GetDirectoryContent(this.FullPath);
+            children.RemoveAll(x => x.Type == DirectoryType.SpecialFolder);
             this.Children = new ObservableCollection<FileItemViewModel>(children.Select(content => new FileItemViewModel(content.FullPath, content.Type, content.Name)));
         }
 
