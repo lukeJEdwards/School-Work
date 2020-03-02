@@ -61,12 +61,12 @@
                         VerticalAlignment="Bottom">
 
                 <TextBlock Style="{StaticResource SearchBoxTitle}" Grid.Row="0" Grid.Column="0"
-                       Grid.ColumnSpan="3" 
-                           Text="{Binding Path=searchValue, Mode=OneWay}"/>
+                       Grid.ColumnSpan="3" Text="{Binding Path=searchValue, Mode=OneWay}"/>
 
                 <xctk:WatermarkTextBox Style="{StaticResource CustomTextbox}" Grid.Column="0" Grid.Row="0"
                  Grid.ColumnSpan="3" Margin="16,0,16,16" Padding="15,0,0,0" Height="36" 
-                 x:Name="searchValue"/>
+                 x:Name="searchValue"
+                 cal:Message.Attach="[Event KeyDown] = [Action SearchEnter()]"/>
             </StackPanel>
 
             <!--Row Two-->
@@ -87,18 +87,20 @@
 
             </TreeView>
 
-            <ItemsControl Grid.Row="2" Grid.Column="2" ItemsSource="{Binding Path=CurrentPathChildren}">
-                <ItemsControl.ItemTemplate>
-                    <DataTemplate>
-                        <StackPanel Style="{StaticResource FileItem}"
+            <ScrollViewer Grid.Row="2" Grid.Column="2" VerticalScrollBarVisibility="Auto">
+                <ItemsControl ItemsSource="{Binding Path=CurrentPathChildren}">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Style="{StaticResource FileItem}"
                                     cal:Message.Attach="[Event MouseLeftButtonDown]=[Action OpenChild($dataContext)]">
-                            <Image Source="{Binding Path=Image, Mode=OneWay}"/>
-                            <TextBlock Foreground="White" VerticalAlignment="Center"
+                                <Image Source="{Binding Path=Image, Mode=OneWay}"/>
+                                <TextBlock Foreground="White" VerticalAlignment="Center"
                                        Text="{Binding Path=Name, Mode=OneWay}"/>
-                        </StackPanel>
-                    </DataTemplate>
-                </ItemsControl.ItemTemplate>
-            </ItemsControl>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </ScrollViewer>
 
         </Grid>
     </Border>

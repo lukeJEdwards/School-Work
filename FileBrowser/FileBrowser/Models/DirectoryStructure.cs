@@ -4,6 +4,10 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.Serialization;
+using System.Security;
+using System.Security.AccessControl;
+using System.Security.Permissions;
+using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -143,13 +147,17 @@ namespace FileBrowser.Models
                     //loop through Directories and converts them to directoryitem and adds them to item list
                     foreach(string dir in dirs)
                     {
-                        if(SDirs.Contains(GetFileOrFolderName(dir).Replace(" ", "")))
-                        {
-                            items.Add(new DirectoryItem() { FullPath = dir, Type = DirectoryType.SpecialFolder });
-                        }
-                        else
-                        {
-                            items.Add(new DirectoryItem() { FullPath = dir, Type = DirectoryType.Folder });
+                        DirectoryInfo info = new DirectoryInfo(dir);
+                        if (!Flag(info) && PermissionCheck(dir))
+                        { 
+                            if (SDirs.Contains(GetFileOrFolderName(dir).Replace(" ", "")))
+                            {
+                                items.Add(new DirectoryItem() { FullPath = dir, Type = DirectoryType.SpecialFolder });
+                            }
+                            else
+                            {
+                                items.Add(new DirectoryItem() { FullPath = dir, Type = DirectoryType.Folder });
+                            }
                         }
                     }
                 }
@@ -168,7 +176,14 @@ namespace FileBrowser.Models
                 if(files.Length > 0)
                 {
                     //loop through file names converts them to directory item and add them to tiems
-                    items.AddRange(files.Select(file => new DirectoryItem { FullPath = file, Type = DirectoryType.File }));
+                    foreach(string file in files)
+                    {
+                        FileInfo info = new FileInfo(file);
+                        if (!Flag(info))
+                        {
+                            items.Add(new DirectoryItem() { FullPath = file, Type = DirectoryType.File });
+                        }
+                    }
                 }
             }
             catch(Exception)
@@ -177,6 +192,23 @@ namespace FileBrowser.Models
             }
             return items;
             #endregion
+        }
+
+        private static bool Flag(DirectoryInfo e) => e.Attributes.HasFlag(FileAttributes.Hidden) || e.Attributes.HasFlag(FileAttributes.System) || e.Attributes.HasFlag(FileAttributes.Archive);
+        private static bool Flag(FileInfo e) => e.Attributes.HasFlag(FileAttributes.Hidden) || e.Attributes.HasFlag(FileAttributes.System) || e.Attributes.HasFlag(FileAttributes.Archive);
+
+        private static bool PermissionCheck(string path)
+        {
+            var permissionset = new PermissionSet(PermissionState.None);
+            var readPermission = new FileIOPermission(FileIOPermissionAccess.Read, path);
+            if (permissionset.IsSubsetOf(AppDomain.CurrentDomain.PermissionSet))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
 

@@ -131,19 +131,34 @@ namespace FileBrowser.Models
         {
             //create empty item list
             List<DirectoryItem> items = new List<DirectoryItem>();
+            List<string> SDirs = Enum.GetNames(typeof(Environment.SpecialFolder)).ToList();
             #region Gets folders
             //trys to get directories that are in fullPath
             try
             {
                 //gets names of all folders in directory
                 string[] dirs = Directory.GetDirectories(fullPath);
-                if(dirs.Length > 0)
+                if (dirs.Length > 0)
                 {
                     //loop through Directories and converts them to directoryitem and adds them to item list
-                    items.AddRange(dirs.Select(dir => new DirectoryItem { FullPath = dir, Type = DirectoryType.Folder }));
+                    foreach (string dir in dirs)
+                    {
+                        DirectoryInfo info = new DirectoryInfo(fullPath);
+                        if (!info.Attributes.HasFlag(FileAttributes.Hidden))
+                        {
+                            if (SDirs.Contains(GetFileOrFolderName(dir).Replace(" ", "")))
+                            {
+                                items.Add(new DirectoryItem() { FullPath = dir, Type = DirectoryType.SpecialFolder });
+                            }
+                            else
+                            {
+                                items.Add(new DirectoryItem() { FullPath = dir, Type = DirectoryType.Folder });
+                            }
+                        }
+                    }
                 }
             }
-            catch(Exception)
+            catch (Exception)
             {
                 throw new DirectoryNotFoundException();
             }
@@ -154,13 +169,13 @@ namespace FileBrowser.Models
             {
                 //gets all file names in directory
                 string[] files = Directory.GetFiles(fullPath);
-                if(files.Length > 0)
+                if (files.Length > 0)
                 {
                     //loop through file names converts them to directory item and add them to tiems
                     items.AddRange(files.Select(file => new DirectoryItem { FullPath = file, Type = DirectoryType.File }));
                 }
             }
-            catch(Exception)
+            catch (Exception)
             {
                 throw new FileNotFoundException();
             }

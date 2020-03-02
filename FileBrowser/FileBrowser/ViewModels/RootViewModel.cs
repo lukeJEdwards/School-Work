@@ -21,6 +21,7 @@ namespace FileBrowser.ViewModels
         private Stack<FileItemViewModel> _ForwardButtonStack;
         private bool _GoingBack;
         private string _searchValue;
+        private Tree _searchTree;
         private ObservableCollection<DirectoryItemViewModel> _drives;
 
         #region public varables
@@ -142,6 +143,24 @@ namespace FileBrowser.ViewModels
         public void OpenFromSidebar(DirectoryItemViewModel path)
         {
             OpenChild(new FileItemViewModel(path.FullPath, path.Type, path.Name));
+        }
+
+        public void SearchEnter()
+        {
+            if (Keyboard.IsKeyDown(Key.Return))
+            {
+                _searchTree = new Tree(CurrentPath.FullPath, CurrentPath.Type);
+                List<DirectoryItem> results;
+                if (!_searchValue.Contains('.'))
+                {
+                    results = _searchTree.BredthSearch(searchValue);
+                }
+                else
+                {
+                    results = _searchTree.DepthSearch(searchValue);
+                }
+                this.CurrentPathChildren = new ObservableCollection<FileItemViewModel>(results.Select(x => new FileItemViewModel(x, true)));
+            }
         }
     }
 }

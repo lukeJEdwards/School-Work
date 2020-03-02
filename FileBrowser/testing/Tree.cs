@@ -22,16 +22,16 @@ namespace FileBrowser.Models
             this.root = new TreeNode(Root, type, null);
         }
 
-        public List<DirectoryItem> BredthSearch(string value)
+        public string[] BredthSearch(string value)
         {
             Queue<TreeNode> ToVist = new Queue<TreeNode>();
             List<TreeNode> Visted = new List<TreeNode>();
-            List<DirectoryItem> Results = new List<DirectoryItem>();
+            List<string> Results = new List<string>();
             ToVist.Enqueue(this.root);
             while(ToVist.Count > 0)
             {
                 TreeNode Visting = ToVist.Dequeue();
-                if (Visting.Data.FullPath.Contains(value))
+                if (Visting.Data.Contains(value))
                 {
                     Results.Add(Visting.Data);
                 }
@@ -44,25 +44,25 @@ namespace FileBrowser.Models
                 }
                 Visted.Add(Visting);
             }
-            return Results;
+            return Results.ToArray();
         }
 
-        public List<DirectoryItem> DepthSearch(string value)
+        public string[] DepthSearch(string value)
         {
             List<TreeNode> visted = new List<TreeNode>();
-            List<DirectoryItem> Results = new List<DirectoryItem>();
+            List<string> Results = new List<string>();
             DF(ref visted, ref Results, this.root, value);
-            return Results;
+            return Results.ToArray();
         }
 
-        private void DF(ref List<TreeNode> Visted, ref List<DirectoryItem> Results, TreeNode node, string value)
+        private void DF(ref List<TreeNode> Visted, ref List<string> Results, TreeNode node, string value)
         {
             if (node.Children.Count > 0)
             {
                 Visted.Add(node);
                 foreach(TreeNode child in node.Children)
                 {
-                    if (child.Data.FullPath.Contains(value))
+                    if (child.Data.Contains(value))
                     {
                         Results.Add(child.Data);
                     }
@@ -76,10 +76,11 @@ namespace FileBrowser.Models
 
     public class TreeNode
     {
-        private DirectoryItem data;
+        private string data;
+        private DirectoryType type;
         private TreeNode parent;
         private List<TreeNode> children;
-        public DirectoryItem Data
+        public string Data
         {
             get { return data; }
         }
@@ -92,26 +93,33 @@ namespace FileBrowser.Models
         {
             get { return parent; }
         }
+        public DirectoryType Type
+        {
+            get { return type; }
+            set { type = value; }
+        }
 
         public TreeNode(string FullPath, TreeNode Parent)
         {
             this.parent = Parent;
-            this.data = new DirectoryItem { FullPath = FullPath, Type = DirectoryType.File };
+            this.data = FullPath;
+            this.type = DirectoryType.File;
             this.children = new List<TreeNode>();
         }
         public TreeNode(string FullPath, DirectoryType Type, TreeNode Parent)
         {
-            this.data = new DirectoryItem { FullPath = FullPath, Type = Type };
+            this.data = FullPath;
             this.parent = Parent;
+            this.type = Type;
             this.children = new List<TreeNode>();
             this.getChildren();
         }
 
         private void getChildren()
         {
-            if(this.Data.Type != DirectoryType.File)
+            if(this.type != DirectoryType.File)
             {
-               List<DirectoryItem> directoryItems = DirectoryStructure.GetDirectoryContent(this.data.FullPath);
+               List<DirectoryItem> directoryItems = DirectoryStructure.GetDirectoryContent(this.data);
                 foreach(DirectoryItem item in directoryItems)
                 {
                     if(item.Type == DirectoryType.File)
@@ -139,10 +147,10 @@ namespace FileBrowser.Models
             while (high > low)
             {
                 mid = (high + low) / 2;
-                if (children[mid].Data.FullPath == value)
+                if (children[mid].Data == value)
                 {
                     return mid;
-                }else if(string.Compare(children[mid].Data.FullPath, value) < 0)
+                }else if(string.Compare(children[mid].Data, value) < 0)
                 {
                     high = mid - 1;
                 }

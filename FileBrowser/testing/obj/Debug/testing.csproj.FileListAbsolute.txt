@@ -15,3 +15,9 @@ D:\Documents (D)\School-Work\FileBrowser\testing\bin\Debug\testing.pdb
 D:\Documents (D)\School-Work\FileBrowser\testing\obj\Debug\testing.csprojAssemblyReference.cache
 D:\Documents (D)\School-Work\FileBrowser\testing\obj\Debug\testing.exe
 D:\Documents (D)\School-Work\FileBrowser\testing\obj\Debug\testing.pdb
+C:\Users\lukee\Documents\School-Work\FileBrowser\testing\obj\Debug\testing.csprojAssemblyReference.cache
+C:\Users\lukee\Documents\School-Work\FileBrowser\testing\obj\Debug\testing.exe
+C:\Users\lukee\Documents\School-Work\FileBrowser\testing\obj\Debug\testing.pdb
+C:\Users\lukee\Documents\School-Work\FileBrowser\testing\bin\Debug\testing.exe.config
+C:\Users\lukee\Documents\School-Work\FileBrowser\testing\bin\Debug\testing.exe
+C:\Users\lukee\Documents\School-Work\FileBrowser\testing\bin\Debug\testing.pdb

@@ -11,11 +11,13 @@ namespace testing
     {
         static void Main(string[] args)
         {
-            List<string> VoidDir = Enum.GetNames(typeof(Environment.SpecialFolder)).ToList<string>();
-            foreach(string dir in VoidDir)
+            Tree a = new Tree(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), DirectoryType.Folder);
+            string[] b = a.DepthSearch("School");
+            foreach(string c in b)
             {
-                Console.WriteLine(dir);
+                Console.WriteLine(c);
             }
+            Console.ReadLine();
         }
     }
 }

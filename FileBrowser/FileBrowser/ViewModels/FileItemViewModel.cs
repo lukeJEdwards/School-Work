@@ -15,6 +15,7 @@ namespace FileBrowser.ViewModels
         private string _fullpath;
         private ObservableCollection<FileItemViewModel> _children;
         private string _name;
+        private bool _searchresult;
         private DirectoryType _type;
 
         public string FullPath
@@ -35,6 +36,11 @@ namespace FileBrowser.ViewModels
                 _children = value;
                 NotifyOfPropertyChange(() => Children);
             }
+        }
+
+        public DirectoryType Type
+        {
+            get { return _type; }
         }
 
         public string Name
@@ -63,11 +69,29 @@ namespace FileBrowser.ViewModels
                 this.Image = new BitmapImage(new Uri(GetImageSource()));
             }
         }
+        public FileItemViewModel(DirectoryItem item, bool searchresuslt)
+        {
+            this.FullPath = item.FullPath;
+            this.Name = item.Name;
+            this._type = item.Type;
+            this._searchresult = searchresuslt;
+            if (this._type == DirectoryType.SpecialFolder)
+            {
+                this.Image = new BitmapImage(new Uri(GetSpecialFolderSource()));
+            }
+            else
+            {
+                this.Image = new BitmapImage(new Uri(GetImageSource()));
+            }
+            if (_searchresult)
+            {
+                Name = FullPath;
+            }
+        }
 
         public void GetChildren()
         {
             List<DirectoryItem> children = DirectoryStructure.GetDirectoryContent(this.FullPath);
-            children.RemoveAll(x => x.Type == DirectoryType.SpecialFolder);
             this.Children = new ObservableCollection<FileItemViewModel>(children.Select(content => new FileItemViewModel(content.FullPath, content.Type, content.Name)));
         }
 

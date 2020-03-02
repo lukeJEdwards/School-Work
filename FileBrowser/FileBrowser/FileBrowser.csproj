@@ -114,6 +114,7 @@
     <Compile Include="Models\Algorithms.cs" />
     <Compile Include="Models\DirectoryItem.cs" />
     <Compile Include="Models\DirectoryStructure.cs" />
+    <Compile Include="Models\Tree.cs" />
     <Compile Include="ViewModels\DirectoryItemViewModel.cs" />
     <Compile Include="ViewModels\FileItemViewModel.cs" />
     <Compile Include="ViewModels\RelayCommand.cs" />

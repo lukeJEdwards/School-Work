@@ -19,6 +19,7 @@ namespace FileBrowser.Models
         File,
         Folder,
         Drive,
-        SpecialFolder
+        SpecialFolder,
+        NUll
     }
 }
