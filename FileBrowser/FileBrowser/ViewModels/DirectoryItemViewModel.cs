@@ -144,13 +144,12 @@ namespace FileBrowser.ViewModels
                     return "pack://application:,,,/Icons/MyDocuments.png";
                 case "MyVideos":
                     return "pack://application:,,,/Icons/MyVideos.png";
-                case "MyPhoto":
-                    return "pack://application:,,,/Icons/MyPhoto.png";
+                case "MyPictures":
+                    return "pack://application:,,,/Icons/MyPhotos.png";
                 case "MyDownloads":
                     return "pack://application:,,,/Icons/MyDownloads.png";
                 case "MyMusic":
                     return "pack://application:,,,/Icons/MyMusic.png";
-
                 default:
                     return "pack://application:,,,/Icons/Error.png";
             }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Messaging;
 using System.Runtime.Serialization;
 using System.Security;
 using System.Security.AccessControl;
@@ -136,20 +137,20 @@ namespace FileBrowser.Models
             //create empty item list
             List<DirectoryItem> items = new List<DirectoryItem>();
             List<string> SDirs = Enum.GetNames(typeof(Environment.SpecialFolder)).ToList<string>();
+            string[] dirs;
             #region Gets folders
             //trys to get directories that are in fullPath
+            dirs = Directory.GetDirectories(fullPath);
             try
             {
-                //gets names of all folders in directory
-                string[] dirs = Directory.GetDirectories(fullPath);
-                if(dirs.Length > 0)
+                if (dirs.Length > 0)
                 {
                     //loop through Directories and converts them to directoryitem and adds them to item list
-                    foreach(string dir in dirs)
+                    foreach (string dir in dirs)
                     {
                         DirectoryInfo info = new DirectoryInfo(dir);
-                        if (!Flag(info) && PermissionCheck(dir))
-                        { 
+                        if (!Flag(info))
+                        {
                             if (SDirs.Contains(GetFileOrFolderName(dir).Replace(" ", "")))
                             {
                                 items.Add(new DirectoryItem() { FullPath = dir, Type = DirectoryType.SpecialFolder });
@@ -195,21 +196,7 @@ namespace FileBrowser.Models
         }
 
         private static bool Flag(DirectoryInfo e) => e.Attributes.HasFlag(FileAttributes.Hidden) || e.Attributes.HasFlag(FileAttributes.System) || e.Attributes.HasFlag(FileAttributes.Archive);
-        private static bool Flag(FileInfo e) => e.Attributes.HasFlag(FileAttributes.Hidden) || e.Attributes.HasFlag(FileAttributes.System) || e.Attributes.HasFlag(FileAttributes.Archive);
-
-        private static bool PermissionCheck(string path)
-        {
-            var permissionset = new PermissionSet(PermissionState.None);
-            var readPermission = new FileIOPermission(FileIOPermissionAccess.Read, path);
-            if (permissionset.IsSubsetOf(AppDomain.CurrentDomain.PermissionSet))
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
+        private static bool Flag(FileInfo e) => e.Attributes.HasFlag(FileAttributes.Hidden) || e.Attributes.HasFlag(FileAttributes.System);
 
 
         /// <summary>
