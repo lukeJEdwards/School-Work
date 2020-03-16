@@ -71,7 +71,7 @@
 
             <!--Row Two-->
             <!--Side Bar-->
-            
+
             <TreeView Style="{StaticResource CustomTreeView}" Grid.Row="2" Grid.Column="1"
                       ItemsSource="{Binding Path=Drives}" ItemContainerStyle="{StaticResource TreeViewItemBase}">
 
@@ -92,7 +92,7 @@
                     <ItemsControl.ItemTemplate>
                         <DataTemplate>
                             <StackPanel Style="{StaticResource FileItem}"
-                                    cal:Message.Attach="[Event MouseLeftButtonDown]=[Action Clicked($dataContext)]">
+                                    cal:Message.Attach="[Event MouseLeftButtonDown]=[Action OpenChild($dataContext)]">
                                 <Image Source="{Binding Path=Image, Mode=OneWay}"/>
                                 <TextBlock Foreground="White" VerticalAlignment="Center"
                                        Text="{Binding Path=Name, Mode=OneWay}"/>

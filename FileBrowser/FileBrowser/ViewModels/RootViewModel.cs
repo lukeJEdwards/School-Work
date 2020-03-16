@@ -19,6 +19,7 @@ namespace FileBrowser.ViewModels
         private FileItemViewModel _currentPath;
         private Stack<FileItemViewModel> _BackButtonStack;
         private Stack<FileItemViewModel> _ForwardButtonStack;
+        private bool _GoingBack;
         private string _searchValue;
         private Tree _searchTree;
         private ObservableCollection<DirectoryItemViewModel> _drives;
@@ -71,18 +72,16 @@ namespace FileBrowser.ViewModels
         {
             this._BackButtonStack = new Stack<FileItemViewModel>();
             this._ForwardButtonStack = new Stack<FileItemViewModel>();
+            this._GoingBack = false;
+            this.Drives = new ObservableCollection<DirectoryItemViewModel>(DirectoryStructure.GetLogicalDrives().Select(e => new DirectoryItemViewModel(e.FullPath, e.Type, e.Name)));
+            DefultDirectoies();
             this.CurrentPath = new FileItemViewModel(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), DirectoryType.SpecialFolder, $"{Environment.SpecialFolder.MyDocuments}");
             this.CurrentPath.GetChildren();
-            Sidebar();
         }
 
-        private void Sidebar()
+        private void DefultDirectoies()
         {
-            List<Environment.SpecialFolder> folders = Enum.GetValues(typeof(Environment.SpecialFolder)).Cast<Environment.SpecialFolder>().Where(x => x.ToString().ToLower().Contains("my")).ToList();
-            folders.Remove(Environment.SpecialFolder.MyDocuments);
-            folders.Remove(Environment.SpecialFolder.MyComputer);
-            List<DirectoryItem> drives = DirectoryStructure.GetLogicalDrives();
-            this.Drives = new ObservableCollection<DirectoryItemViewModel>(folders.Select(e => new DirectoryItemViewModel(Environment.GetFolderPath(e), DirectoryType.SpecialFolder, e.ToString())).Concat(drives.Select(e => new DirectoryItemViewModel(e.FullPath, e.Type, e.Name))));
+            this.Drives.Insert(0, new DirectoryItemViewModel(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), DirectoryType.SpecialFolder, $"{Environment.SpecialFolder.MyDocuments}"));
         }
 
 
@@ -110,45 +109,43 @@ namespace FileBrowser.ViewModels
 
         public void BackButton()
         {
-            if(this._BackButtonStack.Count > 0)
+            if (this._BackButtonStack.Count > 0)
             {
-                this._ForwardButtonStack.Push(CurrentPath);
+                this._ForwardButtonStack.Push(this.CurrentPath);
                 this.CurrentPath = this._BackButtonStack.Pop();
-                NotifyOfPropertyChange(() => CurrentPathChildren);
+                NotifyOfPropertyChange(() => this.CurrentPathChildren);
+                this._GoingBack = true;
             }
         }
 
         public void ForwardButton()
         {
-            if(this._ForwardButtonStack.Count > 0)
+            if (this._ForwardButtonStack.Count > 0)
             {
-                this._BackButtonStack.Push(CurrentPath);
+                this._BackButtonStack.Push(this.CurrentPath);
                 this.CurrentPath = this._ForwardButtonStack.Pop();
-                NotifyOfPropertyChange(() => CurrentPathChildren);
+                NotifyOfPropertyChange(() => this.CurrentPathChildren);
             }
         }
 
-        public void Clicked(FileItemViewModel child)
+        public void OpenChild(FileItemViewModel child)
         {
-            if(child.Type == DirectoryType.File)
+            this._BackButtonStack.Push(this.CurrentPath);
+            this.CurrentPath = child;
+            this.CurrentPath.GetChildren();
+            NotifyOfPropertyChange(() => CurrentPathChildren);
+            if (this._GoingBack)
             {
-                DirectoryStructure.OpenFileInProgramme(child.FullPath);
-            }
-            else
-            {
-                this._BackButtonStack.Push(CurrentPath);
-                child.GetChildren();
-                this.CurrentPath = child;
-                NotifyOfPropertyChange(() => CurrentPathChildren);
+                this._ForwardButtonStack.Clear();
             }
         }
 
         public void OpenFromSidebar(DirectoryItemViewModel path)
         {
-            Clicked(new FileItemViewModel(path.FullPath, path.Type, path.Name));
+            OpenChild(new FileItemViewModel(path.FullPath, path.Type, path.Name));
         }
 
-        public async void SearchEnter()
+        public void SearchEnter()
         {
             if (Keyboard.IsKeyDown(Key.Return))
             {
@@ -156,48 +153,14 @@ namespace FileBrowser.ViewModels
                 List<DirectoryItem> results;
                 if (!_searchValue.Contains('.'))
                 {
-                    results = await App.Current.Dispatcher.InvokeAsync(() => _searchTree.BredthSearch(searchValue));
+                    results = _searchTree.BredthSearch(searchValue);
                 }
                 else
                 {
-                    results = await App.Current.Dispatcher.InvokeAsync(() => _searchTree.DepthSearch(searchValue));
+                    results = _searchTree.DepthSearch(searchValue);
                 }
-                if(results.Count > 0)
-                {
-                    this.CurrentPathChildren = App.Current.Dispatcher.Invoke(() => SearchResultSort(results, 0, results.Count - 1));
-                }
+                this.CurrentPathChildren = new ObservableCollection<FileItemViewModel>(results.Select(x => new FileItemViewModel(x, true)));
             }
-        }
-
-        private ObservableCollection<FileItemViewModel> SearchResultSort(List<DirectoryItem> results, int high, int low)
-        {
-            if (low < high)
-            {
-                int p = partition(results, high, low);
-                SearchResultSort(results, low, p - 1);
-                SearchResultSort(results, p + 1, high);
-            }
-            return new ObservableCollection<FileItemViewModel>(results.Select(x => new FileItemViewModel(x, true)));
-        }
-
-        private int partition(List<DirectoryItem> arr, int high, int low)
-        {
-            string piviot = arr[high].FullPath;
-            int i = low - 1;
-            for(int j = 0; j<high; j++)
-            {
-                if(string.Compare(arr[j].FullPath, piviot) < 0)
-                {
-                    i++;
-                    DirectoryItem temp = arr[i];
-                    arr[i] = arr[j];
-                    arr[j] = temp;
-                }
-            }
-            DirectoryItem temp1 = arr[i + 1];
-            arr[i + 1] = arr[high];
-            arr[high] = temp1;
-            return i + 1;
         }
     }
 }

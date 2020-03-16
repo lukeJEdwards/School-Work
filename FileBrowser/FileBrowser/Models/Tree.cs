@@ -31,7 +31,6 @@ namespace FileBrowser.Models
             while(ToVist.Count > 0)
             {
                 TreeNode Visting = ToVist.Dequeue();
-                Visting.getChildren();
                 if (Visting.Data.FullPath.Contains(value))
                 {
                     Results.Add(Visting.Data);
@@ -105,9 +104,10 @@ namespace FileBrowser.Models
             this.data = new DirectoryItem { FullPath = FullPath, Type = Type };
             this.parent = Parent;
             this.children = new List<TreeNode>();
+            this.getChildren();
         }
 
-        public void getChildren()
+        private void getChildren()
         {
             if(this.Data.Type != DirectoryType.File)
             {
