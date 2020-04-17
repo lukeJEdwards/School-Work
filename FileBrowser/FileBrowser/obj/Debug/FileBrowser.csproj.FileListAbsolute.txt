@@ -408,4 +408,3 @@ C:\Users\lukee\Documents\School-Work\FileBrowser\FileBrowser\obj\Debug\FileBrows
 C:\Users\lukee\Documents\School-Work\FileBrowser\FileBrowser\obj\Debug\FileBrowser.csproj.CopyComplete
 C:\Users\lukee\Documents\School-Work\FileBrowser\FileBrowser\obj\Debug\FileBrowser.exe
 C:\Users\lukee\Documents\School-Work\FileBrowser\FileBrowser\obj\Debug\FileBrowser.pdb
-D:\Documents (D)\School-Work\FileBrowser\FileBrowser\obj\Debug\FileBrowser.csproj.CoreCompileInputs.cache
