@@ -1,4 +1,4 @@
-﻿<Window
+﻿<Window 
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -8,14 +8,21 @@
         mc:Ignorable="d" x:Name="Root"
         xmlns:cal="http://www.caliburnproject.org"
         xmlns:local="clr-namespace:FileBrowser.Views"
-        Title="RootView" Background="Transparent" WindowStyle="None"
-        Width="800" Height="600"
-        WindowStartupLocation="CenterScreen" AllowsTransparency="True" >
-    
-    <Border Style="{StaticResource RootStyle}">
-        <Grid>
+        Title="RootView" Background="{StaticResource Background}" WindowStyle="None"
+        Width="800" Height="600" 
+        WindowStartupLocation="CenterScreen">
 
-            <Grid.RowDefinitions>
+    <WindowChrome.WindowChrome>
+        <WindowChrome
+            ResizeBorderThickness="{Binding ResizeBorderThickness}"
+            CaptionHeight="{Binding TitleHeight}"
+            CornerRadius="0"
+            GlassFrameThickness="0"
+            />
+    </WindowChrome.WindowChrome>
+    
+    <Grid>
+        <Grid.RowDefinitions>
                 <RowDefinition Height="10"/>
                 <RowDefinition Height="100"/>
                 <RowDefinition Height="*"/>
@@ -32,8 +39,7 @@
 
 
             <!--Row 1-->
-            <Border BorderThickness="0 0 0 1" BorderBrush="White" Grid.Row="1" Grid.Column="0"
-                    Grid.ColumnSpan="4"/>
+            
 
             <!--Undo buttons-->
             <StackPanel Orientation="Horizontal" Grid.Row="1" Grid.Column="1"
@@ -103,5 +109,4 @@
             </ScrollViewer>
 
         </Grid>
-    </Border>
 </Window>
