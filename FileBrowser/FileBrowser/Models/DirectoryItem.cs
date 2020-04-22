@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace FileBrowser.Models
 {
@@ -10,7 +11,7 @@ namespace FileBrowser.Models
     {
         public DirectoryType Type { set; get; }
         public string FullPath { set; get; }
-
+        public Visibility Hidden { set; get; }
         public string Name { get { return this.Type == DirectoryType.Drive ? $"(Local Disk): {this.FullPath}" : DirectoryStructure.GetFileOrFolderName(this.FullPath); } }
     }
 
@@ -19,7 +20,12 @@ namespace FileBrowser.Models
         File,
         Folder,
         Drive,
-        SpecialFolder,
+        MyDocuments,
+        MyDownloads,
+        MyPhotos,
+        MyVideos,
+        MyMusic,
+        Desktop,
         NUll
     }
 }

@@ -10,6 +10,7 @@ using System.Security.Permissions;
 using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace FileBrowser.Models
 {
@@ -131,83 +132,57 @@ namespace FileBrowser.Models
         /// </summary>
         /// <param name="fullPath"></param>
         /// <returns></returns>
-        public static List<DirectoryItem> GetDirectoryContent(string fullPath)
+        public static List<DirectoryItem> GetDirectoryFolders(string fullPath)
         {
-            //create empty item list
-            List<DirectoryItem> items = new List<DirectoryItem>();
-            List<string> SDirs = Enum.GetNames(typeof(Environment.SpecialFolder)).ToList<string>();
-            #region Gets folders
-            //trys to get directories that are in fullPath
             try
             {
-                //gets names of all folders in directory
-                string[] dirs = Directory.GetDirectories(fullPath);
-                if(dirs.Length > 0)
+                List<DirectoryItem> items = new List<DirectoryItem>();
+                string[] folders = Directory.GetDirectories(fullPath);
+                if(folders.Length > 0)
                 {
-                    //loop through Directories and converts them to directoryitem and adds them to item list
-                    foreach(string dir in dirs)
+                    foreach(string folder in folders)
                     {
-                        DirectoryInfo info = new DirectoryInfo(dir);
-                        if (!Flag(info) && PermissionCheck(dir))
-                        { 
-                            if (SDirs.Contains(GetFileOrFolderName(dir).Replace(" ", "")))
-                            {
-                                items.Add(new DirectoryItem() { FullPath = dir, Type = DirectoryType.SpecialFolder });
-                            }
-                            else
-                            {
-                                items.Add(new DirectoryItem() { FullPath = dir, Type = DirectoryType.Folder });
-                            }
+                        if (IsHidden(folder))
+                        {
+                            items.Add(new DirectoryItem() { FullPath = folder, Type = DirectoryType.Folder, Hidden = Visibility.Collapsed});
+                        }
+                        else
+                        {
+                            items.Add(new DirectoryItem() { FullPath = folder, Type = DirectoryType.Folder, Hidden = Visibility.Visible });
                         }
                     }
                 }
-            }
-            catch(Exception)
+                return items;
+            }catch
             {
                 throw new DirectoryNotFoundException();
             }
-            #endregion
-            #region Get Files
-            //trys to ge files that are in directory
-            try
-            {
-                //gets all file names in directory
-                string[] files = Directory.GetFiles(fullPath);
-                if(files.Length > 0)
-                {
-                    //loop through file names converts them to directory item and add them to tiems
-                    foreach(string file in files)
-                    {
-                        FileInfo info = new FileInfo(file);
-                        if (!Flag(info))
-                        {
-                            items.Add(new DirectoryItem() { FullPath = file, Type = DirectoryType.File });
-                        }
-                    }
-                }
-            }
-            catch(Exception)
-            {
-                throw new FileNotFoundException();
-            }
-            return items;
-            #endregion
         }
 
-        private static bool Flag(DirectoryInfo e) => e.Attributes.HasFlag(FileAttributes.Hidden) || e.Attributes.HasFlag(FileAttributes.System) || e.Attributes.HasFlag(FileAttributes.Archive);
-        private static bool Flag(FileInfo e) => e.Attributes.HasFlag(FileAttributes.Hidden) || e.Attributes.HasFlag(FileAttributes.System) || e.Attributes.HasFlag(FileAttributes.Archive);
-
-        private static bool PermissionCheck(string path)
+        private static bool IsHidden(string fullpath)
         {
-            var permissionset = new PermissionSet(PermissionState.None);
-            var readPermission = new FileIOPermission(FileIOPermissionAccess.Read, path);
-            if (permissionset.IsSubsetOf(AppDomain.CurrentDomain.PermissionSet))
+            DirectoryInfo di = new DirectoryInfo(fullpath);
+            return di.Attributes.HasFlag(FileAttributes.Hidden) || di.Attributes.HasFlag(FileAttributes.System);
+        }
+
+        public static List<DirectoryItem> GetDirectoryFiles(string fullpath)
+        {
+            try
             {
-                return true;
+                List<DirectoryItem> items = new List<DirectoryItem>();
+                string[] files = Directory.GetFiles(fullpath);
+                if (files.Length > 0)
+                {
+                    foreach (string file in files)
+                    {
+                        items.Add(new DirectoryItem() { FullPath = file, Type = DirectoryType.File });
+                    }
+                }
+                return items;
             }
-            else
+            catch
             {
-                return false;
+                throw new FileNotFoundException();
             }
         }
 
@@ -252,6 +227,35 @@ namespace FileBrowser.Models
             }
             //return the name after the last back slash
             return path.Substring(lastIndex + 1);
+        }
+
+        public static string GetPicture(DirectoryType type)
+        {
+            switch (type)
+            {
+                case DirectoryType.File:
+                    return "pack://application:,,,/Icons/File.png";
+                case DirectoryType.Folder:
+                    return "pack://application:,,,/Icons/Folder.png";
+                case DirectoryType.Drive:
+                    return "pack://application:,,,/Icons/Drive.png";
+                case DirectoryType.MyDocuments:
+                    return "pack://application:,,,/Icons/MyDocuments.png";
+                case DirectoryType.MyDownloads:
+                    return "pack://application:,,,/Icons/MyDownloads.png";
+                case DirectoryType.MyPhotos:
+                    return "pack://application:,,,/Icons/MyPhotos.png";
+                case DirectoryType.MyVideos:
+                    return "pack://application:,,,/Icons/MyVideos.png";
+                case DirectoryType.MyMusic:
+                    return "pack://application:,,,/Icons/MyMusic.png";
+                case DirectoryType.Desktop:
+                    return "pack://application:,,,/Icons/Desktop.png";
+                case DirectoryType.NUll:
+                    return "pack://application:,,,/Icons/Error.png";
+                default:
+                    return "pack://application:,,,/Icons/Error.png";
+            }
         }
 
         #endregion

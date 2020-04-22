@@ -111,7 +111,7 @@ namespace FileBrowser.Models
         {
             if(this.Data.Type != DirectoryType.File)
             {
-               List<DirectoryItem> directoryItems = DirectoryStructure.GetDirectoryContent(this.data.FullPath);
+               List<DirectoryItem> directoryItems = DirectoryStructure.GetDirectoryFolders(this.data.FullPath);
                 foreach(DirectoryItem item in directoryItems)
                 {
                     if(item.Type == DirectoryType.File)

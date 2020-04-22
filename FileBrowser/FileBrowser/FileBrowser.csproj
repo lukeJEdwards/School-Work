@@ -116,7 +116,7 @@
     <Compile Include="Models\DirectoryStructure.cs" />
     <Compile Include="Models\Tree.cs" />
     <Compile Include="ViewModels\DirectoryItemViewModel.cs" />
-    <Compile Include="ViewModels\FileItemViewModel.cs" />
+    <Compile Include="ViewModels\InspectViewModel.cs" />
     <Compile Include="ViewModels\RelayCommand.cs" />
     <Compile Include="ViewModels\RootViewModel.cs" />
     <Compile Include="Views\RootView.xaml.cs">
@@ -211,6 +211,16 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Icons\Error.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\Settings.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\Desktop.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
