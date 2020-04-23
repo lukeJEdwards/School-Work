@@ -18,6 +18,11 @@
         <Setter Property="Foreground" Value="White"/>
         <Setter Property="FontFamily" Value="{StaticResource RobotoMono Thin}"/>
         <Setter Property="IsExpanded" Value="{Binding IsExpanded, Mode=TwoWay}"/>
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding Hidden}" Value="true">
+                <Setter Property="Visibility" Value="Collapsed" />
+            </DataTrigger>
+        </Style.Triggers>
     </Style>
 
     <Style x:Key="TreeViewItemBright" TargetType="TreeViewItem" BasedOn="{StaticResource TreeViewItemBase}">

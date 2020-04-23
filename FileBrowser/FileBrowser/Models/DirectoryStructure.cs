@@ -25,6 +25,7 @@ namespace FileBrowser.Models
             if (!Directory.Exists(fullPath))
             {
                 throw new DirectoryNotFoundException();
+
             }
             else
             {
@@ -132,59 +133,90 @@ namespace FileBrowser.Models
         /// </summary>
         /// <param name="fullPath"></param>
         /// <returns></returns>
-        public static List<DirectoryItem> GetDirectoryFolders(string fullPath)
+        public static List<DirectoryItem> GetDirectoryItems(string fullPath)
         {
+            List<DirectoryItem> items = new List<DirectoryItem>();
             try
             {
-                List<DirectoryItem> items = new List<DirectoryItem>();
                 string[] folders = Directory.GetDirectories(fullPath);
-                if(folders.Length > 0)
+                if (folders.Length > 0)
                 {
-                    foreach(string folder in folders)
+                    foreach (string folder in folders)
                     {
-                        if (IsHidden(folder))
+                        if (IsHidden(new DirectoryInfo(folder)))
                         {
-                            items.Add(new DirectoryItem() { FullPath = folder, Type = DirectoryType.Folder, Hidden = Visibility.Collapsed});
+                            items.Add(new DirectoryItem() { FullPath = folder, Type = DirectoryType.Folder, Hidden = true });
                         }
                         else
                         {
-                            items.Add(new DirectoryItem() { FullPath = folder, Type = DirectoryType.Folder, Hidden = Visibility.Visible });
+                            items.Add(new DirectoryItem() { FullPath = folder, Type = DirectoryType.Folder, Hidden = false });
                         }
                     }
                 }
-                return items;
-            }catch
-            {
-                throw new DirectoryNotFoundException();
             }
-        }
+            catch
+            {
+                return new List<DirectoryItem>();
+            }
 
-        private static bool IsHidden(string fullpath)
-        {
-            DirectoryInfo di = new DirectoryInfo(fullpath);
-            return di.Attributes.HasFlag(FileAttributes.Hidden) || di.Attributes.HasFlag(FileAttributes.System);
-        }
-
-        public static List<DirectoryItem> GetDirectoryFiles(string fullpath)
-        {
             try
             {
-                List<DirectoryItem> items = new List<DirectoryItem>();
-                string[] files = Directory.GetFiles(fullpath);
+                string[] files = Directory.GetFiles(fullPath);
                 if (files.Length > 0)
                 {
                     foreach (string file in files)
                     {
-                        items.Add(new DirectoryItem() { FullPath = file, Type = DirectoryType.File });
+                        if (IsHidden(new FileInfo(file)))
+                        {
+                            items.Add(new DirectoryItem() { FullPath = file, Type = DirectoryType.File, Hidden = true });
+                        }
+                        else
+                        {
+                            items.Add(new DirectoryItem() { FullPath = file, Type = DirectoryType.File, Hidden = false });
+                        }
+                    }
+                }
+            }
+            catch
+            {
+                return new List<DirectoryItem>();
+            }
+            return items;
+
+        }
+
+        public static List<DirectoryItem> GetDirectoryFolders(string fullPath)
+        {
+            List<DirectoryItem> items = new List<DirectoryItem>();
+            try
+            {
+                string[] folders = Directory.GetDirectories(fullPath);
+                if (folders.Length > 0)
+                {
+                    foreach (string folder in folders)
+                    {
+                        if (IsHidden(new DirectoryInfo(folder)))
+                        {
+                            items.Add(new DirectoryItem() { FullPath = folder, Type = DirectoryType.Folder, Hidden = true });
+                        }
+                        else
+                        {
+                            items.Add(new DirectoryItem() { FullPath = folder, Type = DirectoryType.Folder, Hidden = false });
+                        }
                     }
                 }
                 return items;
             }
             catch
             {
-                throw new FileNotFoundException();
+                return new List<DirectoryItem>();
             }
         }
+
+
+        private static bool IsHidden(DirectoryInfo di) =>  di.Attributes.HasFlag(FileAttributes.Hidden) || di.Attributes.HasFlag(FileAttributes.System);
+        private static bool IsHidden(FileInfo file) => file.Attributes.HasFlag(FileAttributes.Hidden) || file.Attributes.HasFlag(FileAttributes.System);
+
 
 
         /// <summary>

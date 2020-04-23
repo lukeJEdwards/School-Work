@@ -19,12 +19,15 @@ namespace FileBrowser.ViewModels
         private DirectoryType _type;
         private string _name;
         private BitmapImage _image;
-        private Visibility _hidden;
+        private bool _hidden;
 
         #region Public Variables
         public ObservableCollection<DirectoryItemViewModel> Children
         {
-            get { return _children; }
+            get
+            {
+                return _children;
+            }
             set
             {
                 _children = value;
@@ -84,7 +87,7 @@ namespace FileBrowser.ViewModels
                 }
             }
         }
-        public Visibility Hidden
+        public bool Hidden
         {
             get { return this._hidden; }
             set
@@ -98,7 +101,7 @@ namespace FileBrowser.ViewModels
         public ICommand ExpandCommand { get; set; } 
 
 
-        public DirectoryItemViewModel(string fullpath, DirectoryType type, string Name, Visibility hidden)
+        public DirectoryItemViewModel(string fullpath, DirectoryType type, string Name, bool hidden)
         {
             this.ExpandCommand = new RelayCommand(Expand);
             this.Hidden = hidden;
@@ -125,8 +128,8 @@ namespace FileBrowser.ViewModels
             {
                 return;
             }
-            List<DirectoryItem> Children = DirectoryStructure.GetDirectoryFolders(this.FullPath);
-            this.Children = new ObservableCollection<DirectoryItemViewModel>(Children.Select(content => new DirectoryItemViewModel(content.FullPath, content.Type, content.Name, content.Hidden)));
+            List<DirectoryItem> items = DirectoryStructure.GetDirectoryFolders(this.FullPath);
+            Children = new ObservableCollection<DirectoryItemViewModel>(items.Select(x => new DirectoryItemViewModel(x.FullPath, x.Type, x.Name, x.Hidden))); 
         }
     }
 }

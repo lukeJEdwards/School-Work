@@ -1,0 +1,51 @@
+﻿<Window x:Class="FileBrowser.Views.SettingsView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FileBrowser.Views"
+        xmlns:cal="http://www.caliburnproject.org"
+        mc:Ignorable="d" AllowsTransparency="True" Background="Transparent"
+        ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None"
+        Title="SettingsView" Height="300" Width="300">
+
+    <WindowChrome.WindowChrome>
+        <WindowChrome CaptionHeight="50"/>
+    </WindowChrome.WindowChrome>
+    
+    <Border Style="{StaticResource RootStyle}">
+        <Grid>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <!--Control Buttons-->
+            <Button Style="{StaticResource CloseButton}"
+                    WindowChrome.IsHitTestVisibleInChrome="True"
+                    VerticalAlignment="Center"
+                    Margin="0,0,10,0" cal:Message.Attach="Exit()"/>
+
+            <TextBlock Text="Settings" Foreground="White" VerticalAlignment="Center"
+                    Grid.Row="0" FontSize="24" HorizontalAlignment="Center"/>
+
+            <Border Grid.Row="0" Background="White" BorderThickness="0 0 0 1" Height="3"
+                    VerticalAlignment="Bottom"/>
+
+            <StackPanel Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center"
+                        Width="250" Margin="0,0,0,40">
+                <CheckBox Content="Show hidden items" IsChecked="{Binding Path=ShowHiddenItems, Mode=TwoWay}"
+                       Foreground="White" HorizontalAlignment="Left"/>
+                <CheckBox Content="Only Show files or folder you've visited" IsChecked="{Binding Path=OnlyShowFilesVisted, Mode=TwoWay}"
+                       Foreground="White" Margin="0,20,0,0" HorizontalAlignment="Left"/>
+                <CheckBox Content="Only show file you haven't visted yet" IsChecked="{Binding Path=OnlyShowFileNotVisted, Mode=TwoWay}"
+                       Foreground="White" Margin="0,20,0,0" HorizontalAlignment="Left"/>
+                <CheckBox Content="Filter the directory instead of searching" IsChecked="{Binding Path=FilterNotSearch, Mode=TwoWay}"
+                       Foreground="White" Margin="0,20,0,0" HorizontalAlignment="Left"/>
+            </StackPanel>
+
+
+        </Grid>
+    </Border>
+</Window>

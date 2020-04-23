@@ -43,9 +43,9 @@
             <StackPanel Orientation="Horizontal" Grid.Row="1" Grid.Column="1"
                         HorizontalAlignment="Left" VerticalAlignment="Top" WindowChrome.IsHitTestVisibleInChrome="True">
                 <Button Style="{StaticResource BackButton}" Margin="16,10,0,0"
-                        cal:Message.Attach=""/>
+                        cal:Message.Attach="[Event Click] = [Action BackButton()]"/>
                 <Button Style="{StaticResource ForwardButton}" Margin="0,10,0,0"
-                        cal:Message.Attach=""/>
+                        cal:Message.Attach="[Event Click] = [Action ForwardButton()]"/>
             </StackPanel>
 
             <!--Control Buttons-->
@@ -62,19 +62,20 @@
 
             <Button Style="{StaticResource SettingButton}" Grid.Row="1" Grid.Column="1"
                     HorizontalAlignment="Left" VerticalAlignment="Bottom"
-                    Margin="10,0,0,22"/>
+                    Margin="10,0,0,22"
+                    cal:Message.Attach="[Event Click] = [Action Settings()]"/>
 
             <!--Search Bar-->
             <StackPanel Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3"
                         VerticalAlignment="Bottom">
 
                 <TextBlock Style="{StaticResource SearchBoxTitle}" Grid.Row="0" Grid.Column="0"
-                       Grid.ColumnSpan="3" Text="{Binding Path=searchValue, Mode=OneWay}"/>
+                       Grid.ColumnSpan="3" Text="{Binding Path=Name, Mode=OneWay}"/>
                 
                 <xctk:WatermarkTextBox Style="{StaticResource CustomTextbox}" Grid.Column="0" Grid.Row="0"
                  Grid.ColumnSpan="3" Margin="50,0,16,16" Padding="15,0,0,0" Height="36"
                  x:Name="searchValue"
-                 cal:Message.Attach=""/>
+                 cal:Message.Attach="[Event KeyDown] = [Search($eventargs)]"/>
                 </StackPanel>
 
             <!--Row Two-->
@@ -82,10 +83,10 @@
 
             <TreeView Style="{StaticResource CustomTreeView}" Grid.Row="2" Grid.Column="1"
                       ItemsSource="{Binding Path=Drives}" ItemContainerStyle="{StaticResource TreeViewItemBase}">
-
                 <TreeView.ItemTemplate>
                     <HierarchicalDataTemplate ItemsSource="{Binding Path=Children}">
-                        <StackPanel Orientation="Horizontal" Cursor="Hand">
+                        <StackPanel Orientation="Horizontal" Cursor="Hand"
+                                    cal:Message.Attach="[Event MouseLeftButtonDown] = [Action OpenFromSideBar($dataContext)]">
                                 <Image Width="25" Source="{Binding Path=Image}"/>
                                 <TextBlock VerticalAlignment="Center" Text="{Binding Path=Name, Mode=OneWay}"
                                        cal:Message.Attach=""/>
@@ -94,7 +95,28 @@
                 </TreeView.ItemTemplate>
             </TreeView>
 
-            
+            <ScrollViewer Grid.Row="2" Grid.Column="2" VerticalScrollBarVisibility="Auto"
+                          HorizontalScrollBarVisibility="Auto">
+                <ScrollViewer.ContextMenu>
+                    <ContextMenu>
+                        <MenuItem Header="New Folder" Cursor="Hand"
+                                  cal:Message.Attach=""/>
+                    </ContextMenu>
+                </ScrollViewer.ContextMenu>
+                <ItemsControl ItemsSource="{Binding Path=ViewPortChildren}">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Style="{StaticResource FileItem}"
+                                        cal:Message.Attach="[Event MouseLeftButtonDown] = [Action OpenChild($dataContext, $eventargs)]">
+                                <Image Source="{Binding Path=Image}"/>
+                                <TextBox Text="{Binding Path=Name}" Style="{StaticResource FolderOrFileNameBox}"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </ScrollViewer>
+
+
         </Grid>
     </Border>
 </Window>

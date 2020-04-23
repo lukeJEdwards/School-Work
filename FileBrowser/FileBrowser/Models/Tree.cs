@@ -1,157 +1,94 @@
-﻿using System;
+﻿using Caliburn.Micro;
+using FileBrowser.ViewModels;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace FileBrowser.Models
 {
     public class Tree
     {
-        private TreeNode root;
-        public TreeNode Root
+        public TreeNode root;
+        public Tree(InspectViewModel viewport)
         {
-            get { return root; }
-            set { root = value; }
-        }
+            root = new TreeNode(viewport.FullPath, viewport.Type, viewport.Name, viewport.Hidden);
+        } 
 
-        public Tree() { }
-        public Tree(string Root, DirectoryType type)
-        {
-            this.root = new TreeNode(Root, type, null);
-        }
-
-        public List<DirectoryItem> BredthSearch(string value)
+        public List<TreeNode> BredthSearch(string value)
         {
             Queue<TreeNode> ToVist = new Queue<TreeNode>();
-            List<TreeNode> Visted = new List<TreeNode>();
-            List<DirectoryItem> Results = new List<DirectoryItem>();
+            List<TreeNode> results = new List<TreeNode>();
             ToVist.Enqueue(this.root);
-            while(ToVist.Count > 0)
+            while (ToVist.Count > 0)
             {
-                TreeNode Visting = ToVist.Dequeue();
-                if (Visting.Data.FullPath.Contains(value))
+                TreeNode visiting = ToVist.Dequeue();
+                visiting.GetChildren();
+                if (visiting.FullPath.Contains(value))
                 {
-                    Results.Add(Visting.Data);
+                    results.Add(visiting);
                 }
-                if(Visting.Children.Count> 0)
+                if (visiting.Type != DirectoryType.File && visiting.HasChildren())
                 {
-                    foreach(TreeNode child in Visting.Children)
+                    foreach(TreeNode child in visiting.Children)
                     {
-                        ToVist.Enqueue(child);
+                        if (!child.Hidden)
+                        {
+                            ToVist.Enqueue(child);
+                        }
                     }
                 }
-                Visted.Add(Visting);
             }
-            return Results;
+            ToVist.Clear();
+            return results;
         }
 
-        public List<DirectoryItem> DepthSearch(string value)
+        public async Task<List<TreeNode>> DepthSearch(TreeNode CurrentNode, List<TreeNode> results, string value)
         {
-            List<TreeNode> visted = new List<TreeNode>();
-            List<DirectoryItem> Results = new List<DirectoryItem>();
-            DF(ref visted, ref Results, this.root, value);
-            return Results;
-        }
-
-        private void DF(ref List<TreeNode> Visted, ref List<DirectoryItem> Results, TreeNode node, string value)
-        {
-            if (node.Children.Count > 0)
+            if (CurrentNode.Type != DirectoryType.File)
             {
-                Visted.Add(node);
-                foreach(TreeNode child in node.Children)
+                CurrentNode.GetChildren();
+                foreach (TreeNode child in CurrentNode.Children)
                 {
-                    if (child.Data.FullPath.Contains(value))
+                    if (!results.Contains(child) && child.FullPath.Contains(value))
                     {
-                        Results.Add(child.Data);
+                        results.Add(child);
                     }
-                    DF(ref Visted, ref Results, child, value);
+                    await Task.Run(() => DepthSearch(child, results, value));
                 }
             }
+            return results;
         }
+
 
     }
 
-
     public class TreeNode
     {
-        private DirectoryItem data;
-        private TreeNode parent;
-        private List<TreeNode> children;
-        public DirectoryItem Data
+        public List<TreeNode> Children;
+        public string FullPath;
+        public DirectoryType Type;
+        public bool Hidden;
+        public string Name;
+
+        public TreeNode(string FullPath, DirectoryType Type, string Name, bool hidden)
         {
-            get { return data; }
-        }
-        public List<TreeNode> Children
-        {
-            get { return children; }
-            set { children = value; }
-        }
-        public TreeNode Parent
-        {
-            get { return parent; }
+            this.Hidden = hidden;
+            this.FullPath = FullPath;
+            this.Type = Type;
+            this.Name = Name;
         }
 
-        public TreeNode(string FullPath, TreeNode Parent)
+        public void GetChildren()
         {
-            this.parent = Parent;
-            this.data = new DirectoryItem { FullPath = FullPath, Type = DirectoryType.File };
-            this.children = new List<TreeNode>();
-        }
-        public TreeNode(string FullPath, DirectoryType Type, TreeNode Parent)
-        {
-            this.data = new DirectoryItem { FullPath = FullPath, Type = Type };
-            this.parent = Parent;
-            this.children = new List<TreeNode>();
-            this.getChildren();
-        }
-
-        private void getChildren()
-        {
-            if(this.Data.Type != DirectoryType.File)
+            if (this.Type != DirectoryType.File)
             {
-               List<DirectoryItem> directoryItems = DirectoryStructure.GetDirectoryFolders(this.data.FullPath);
-                foreach(DirectoryItem item in directoryItems)
-                {
-                    if(item.Type == DirectoryType.File)
-                    {
-                        AddChild(item.FullPath, this);
-                    }
-                    else
-                    {
-                        AddChild(item.FullPath, item.Type, this);
-                    }
-                }
-
+                List<DirectoryItem> Items = DirectoryStructure.GetDirectoryItems(this.FullPath);
+                this.Children = Items.Select(x => new TreeNode(x.FullPath, x.Type, x.Name, x.Hidden)).ToList();
             }
         }
 
-        public void AddChild(string Value, DirectoryType Type, TreeNode parent) => children.Add(new TreeNode(Value, Type, parent));
-        public void AddChild(string Value, TreeNode parent) => children.Add(new TreeNode(Value, parent));
-        public void RemoveChild(string Value) => children.RemoveAt(FindChild(Value));
+        public bool HasChildren() => Children.Count > 0;
+        public void AddChild(TreeNode child) => this.Children.Add(child);
 
-        public int FindChild(string value)
-        {
-            int high = children.Count - 1;
-            int low = 0;
-            int mid = (high + low) / 2;
-            while (high > low)
-            {
-                mid = (high + low) / 2;
-                if (children[mid].Data.FullPath == value)
-                {
-                    return mid;
-                }else if(string.Compare(children[mid].Data.FullPath, value) < 0)
-                {
-                    high = mid - 1;
-                }
-                else
-                {
-                    low = mid + 1;
-                }
-            }
-            return -1;
-        }
     }
 }
