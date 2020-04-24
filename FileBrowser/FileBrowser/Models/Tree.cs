@@ -88,7 +88,6 @@ namespace FileBrowser.Models
         }
 
         public bool HasChildren() => Children.Count > 0;
-        public void AddChild(TreeNode child) => this.Children.Add(child);
 
     }
 }

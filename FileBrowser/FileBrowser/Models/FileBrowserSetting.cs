@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FileBrowser.Models
 {
-    public  static class FileBrowserSetting
+    public static class FileBrowserSetting  
     {
         public static bool ShowHiddenFiles { get; set; } = false;
         public static bool OnlyShowFilesVisted { get; set; } = false;

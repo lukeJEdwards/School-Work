@@ -20,15 +20,12 @@
         </Style.Triggers>
     </Style>
 
-    <Style x:Key="FolderOrFileNameBox" TargetType="TextBox">
+    <Style x:Key="FolderOrFileNameBox" TargetType="TextBlock">
         <Setter Property="VerticalAlignment" Value="Center"/>
         <Setter Property="Foreground" Value="White"/>
-        <Setter Property="IsReadOnly" Value="True"/>
         <Setter Property="TextDecorations" Value="none"/>
         <Setter Property="Background" Value="Transparent"/>
         <Setter Property="Cursor" Value="Hand"/>
-        <Setter Property="BorderThickness" Value="0"/>
-        <Setter Property="BorderBrush" Value="Transparent"/>
     </Style>
 
     <Style x:Key="ScrollThumbs" TargetType="{x:Type Thumb}">

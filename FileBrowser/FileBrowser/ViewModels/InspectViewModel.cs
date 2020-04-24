@@ -116,15 +116,13 @@ namespace FileBrowser.ViewModels
 
         public void GetChildren()
         {
-            if (FullPath != null)
+            if (FullPath != null && Type != DirectoryType.File)
             {
                 List<DirectoryItem> item = DirectoryStructure.GetDirectoryItems(this.FullPath);
                 Children = new ObservableCollection<InspectViewModel>(item.Select(x => new InspectViewModel(x.FullPath, x.Type, x.Name, x.Hidden)));
-                NotifyOfPropertyChange(() => Children);
             }
         }
 
         public static implicit operator InspectViewModel(DirectoryItemViewModel e) => new InspectViewModel(e.FullPath, e.Type, e.Name, e.Hidden);
-        public static implicit operator InspectViewModel(DirectoryItem e) => new InspectViewModel(e.FullPath, e.Type, e.Name, e.Hidden);
     }
 }

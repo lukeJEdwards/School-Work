@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="FileBrowser.Models.Algorithms">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAIA=</HashCode>
+      <FileName>Models\Algorithms.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FileBrowser.Models.DirectoryActionFailedException">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\DirectoryStructure.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FileBrowser.Models.DirectoryFoundException">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\DirectoryStructure.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FileBrowser.Models.DirectoryStructure">
+    <Position X="2.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAACAAAAAAIAAAIAAIAAAAAAAIAAAAEAAAAAEiA=</HashCode>
+      <FileName>Models\DirectoryStructure.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FileBrowser.Models.FileActionFailedException">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\DirectoryStructure.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FileBrowser.Models.FileBrowserSetting">
+    <Position X="0.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAgAAAAAAAIEAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\FileBrowserSetting.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FileBrowser.Models.FileFoundException">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\DirectoryStructure.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FileBrowser.Models.Tree">
+    <Position X="5.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAk=</HashCode>
+      <FileName>Models\Tree.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FileBrowser.Models.TreeNode">
+    <Position X="7.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAgAEAAAAAAEAAQAAAAAQAAAAQAAAAAEAAA=</HashCode>
+      <FileName>Models\Tree.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="FileBrowser.Models.DirectoryItem">
+    <Position X="0.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAASAAAAAEAAA=</HashCode>
+      <FileName>Models\DirectoryItem.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Enum Name="FileBrowser.Models.DirectoryType">
+    <Position X="4" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAQAAAAAAAAAAAAAAAAIAAgEgAIAAACAAAAABAA=</HashCode>
+      <FileName>Models\DirectoryItem.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -411,3 +411,5 @@ C:\Users\lukee\Documents\School-Work\FileBrowser\FileBrowser\obj\Debug\FileBrows
 D:\Documents (D)\School-Work\FileBrowser\FileBrowser\obj\Debug\FileBrowser.csproj.CoreCompileInputs.cache
 D:\Documents (D)\School-Work\FileBrowser\FileBrowser\obj\Debug\Views\SettingsView.g.cs
 D:\Documents (D)\School-Work\FileBrowser\FileBrowser\obj\Debug\Views\SettingsView.baml
+C:\Users\lukee\Documents\School-Work\FileBrowser\FileBrowser\obj\Debug\Views\SettingsView.g.cs
+C:\Users\lukee\Documents\School-Work\FileBrowser\FileBrowser\obj\Debug\Views\SettingsView.baml

@@ -158,7 +158,6 @@ namespace FileBrowser.Models
             {
                 return new List<DirectoryItem>();
             }
-
             try
             {
                 string[] files = Directory.GetFiles(fullPath);
@@ -182,7 +181,6 @@ namespace FileBrowser.Models
                 return new List<DirectoryItem>();
             }
             return items;
-
         }
 
         public static List<DirectoryItem> GetDirectoryFolders(string fullPath)

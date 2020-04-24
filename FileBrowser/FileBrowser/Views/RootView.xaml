@@ -109,7 +109,8 @@
                             <StackPanel Style="{StaticResource FileItem}"
                                         cal:Message.Attach="[Event MouseLeftButtonDown] = [Action OpenChild($dataContext, $eventargs)]">
                                 <Image Source="{Binding Path=Image}"/>
-                                <TextBox Text="{Binding Path=Name}" Style="{StaticResource FolderOrFileNameBox}"/>
+                                <TextBlock Text="{Binding Path=Name}" Style="{StaticResource FolderOrFileNameBox}"
+                                         />
                             </StackPanel>
                         </DataTemplate>
                     </ItemsControl.ItemTemplate>

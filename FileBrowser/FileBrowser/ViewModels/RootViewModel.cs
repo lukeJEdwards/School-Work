@@ -33,15 +33,15 @@ namespace FileBrowser.ViewModels
             get
             {
                 ObservableCollection<InspectViewModel> temp = ViewPort.Children;
-                if (FileBrowserSetting.FilterNotSearch)
+                if (FileBrowserSetting.FilterNotSearch && searchValue != null)
                 {
                     temp = new ObservableCollection<InspectViewModel>(temp.Where(x => x.FullPath.Contains(searchValue)));
                 }
-                if (FileBrowserSetting.OnlyShowFilesVisted)
+                if (FileBrowserSetting.OnlyShowFilesVisted && searchValue != null)
                 {
                     temp = new ObservableCollection<InspectViewModel>(temp.Where(x => x.Visted == true));
                 }
-                if (FileBrowserSetting.OnlyShowFilesHaventVisted)
+                if (FileBrowserSetting.OnlyShowFilesHaventVisted && searchValue != null)
                 {
                     temp = new ObservableCollection<InspectViewModel>(temp.Where(x => x.Visted == false));
                 }
